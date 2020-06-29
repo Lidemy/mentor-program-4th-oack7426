@@ -1,4 +1,3 @@
-// TODO: 未完成
 // 給定一個字串，請「印出」反轉之後的樣子（不能使用內建的 reverse 函式）
 
 // reverse('yoyoyo')
@@ -13,11 +12,10 @@ function reverse(str) {
     var array = [];
     var arrayReverse = [];
     array = str.split("");
-    for(var i = 5 ;  i < 0 ; i--){
-        console.log(i);
+    for(var i = array.length-1 ;  i >=0 ; i--){
         arrayReverse.push(array[i]);
     }
-    console.log(arrayReverse);
+    console.log(arrayReverse.join(""));
 }
 
 reverse('hello');
