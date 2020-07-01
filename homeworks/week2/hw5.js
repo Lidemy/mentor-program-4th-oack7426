@@ -7,6 +7,9 @@
 function join(arr, concatStr) {
   var str ="";
   var i = 0;
+  if(arr.length == 0){
+    return "is not a array"
+  }
   while (i<arr.length){
     str += arr[i] ;
     i++;
@@ -25,5 +28,5 @@ function repeat(str, times) {
   return string;
 }
 
-console.log(join(['a'], '!'));
+console.log(join([], "!"));
 console.log(repeat('a', 5));
