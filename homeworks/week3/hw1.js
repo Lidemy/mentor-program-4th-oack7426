@@ -1,4 +1,3 @@
-
 /* eslint-disable */
 var readline = require('readline');
 var rl = readline.createInterface({
@@ -11,15 +10,14 @@ rl.on('line', function (line) {
   lines.push(line)
 });
 
-rl.on('close', function() {
+rl.on('close', function () {
   solve(lines)
 })
-/* eslint-disable */
+/* eslint-enable */
 
-
-function solve(lines) {
-  for (let i = 0; i < lines.length; i++) {
-    for (let ii = 0; ii < lines[i]; ii++) {
+function solve(num) {
+  for (let i = 0; i < num.length; i += 1) {
+    for (let ii = 0; ii < num[i]; ii += 1) {
       console.log('*'.repeat(ii + 1));
     }
   }

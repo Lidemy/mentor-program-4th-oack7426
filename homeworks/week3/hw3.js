@@ -19,9 +19,9 @@ rl.on('close', function () {
 
 // 上面都不用管，只需要完成這個 function 就好，可以透過 lines[i] 拿取內容
 function solve(lines) {
-  for (var i = 0; i < lines.length; i++) {
-    var factor = [];
-    for (var ii = 2; ii < lines[i]; ii++) {
+  for (let i = 0; i < lines.length; i += 1) {
+    let factor = [];
+    for (let ii = 2; ii < lines[i]; ii += 1) {
       if (lines[i] % ii === 0) {
         factor.push(ii);
       }
@@ -33,4 +33,4 @@ function solve(lines) {
     }
   }
 }
-/* eslint-disable */
+/* eslint-enable */
