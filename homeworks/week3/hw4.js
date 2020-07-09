@@ -17,7 +17,6 @@ rl.on('close', function () {
 
 function solve(lines) {
   var strRes = "";
-  var str = lines[0].length;
   for (var i = lines[0].length - 1; i >= 0; i--) {
     strRes += lines[0][i];
   }
