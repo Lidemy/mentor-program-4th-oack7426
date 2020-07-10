@@ -1,48 +1,58 @@
-/* eslint-disable */
-// TODO:卡關先coommit回去再想
-var readline = require('readline');
-var rl = readline.createInterface({
-  input: process.stdin
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
 });
 
-var lines = []
+const lines = [];
 
-rl.on('line', function (line) {
-  lines.push(line)
+rl.on('line', (line) => {
+  lines.push(line);
 });
 
-rl.on('close', function () {
-  solve(lines)
-})
-
-
+function compare(a, b, Alen, Blen) {
+  if (Alen.length > Blen.length) {
+    console.log(a);
+  } else if (Alen.length === Blen.length) {
+    const numLen = Alen.length;
+    for (let ii = 0; ii < numLen; ii += 1) {
+      if (Number(Alen[ii]) > Number(Blen[ii])) {
+        console.log(a);
+        break;
+      }
+      if (Number(Alen[ii]) < Number(Blen[ii])) {
+        console.log(b);
+        break;
+      }
+    }
+  } else {
+    console.log(b);
+  }
+}
 function solve(num) {
   for (let i = 1; i < num.length; i += 1) {
-    var numList = num[i].split(" ");
-    if (Number(num[0]) != num.length - 1) {
-      return
+    const numList = num[i].split(' ');
+    const numListA = numList[0];
+    const numListB = numList[1];
+    const rule = numList[2];
+    if (numListA === numListB) {
+      console.log('DRAW');
     }
-    var rule = Number(numList[2]);
+
+
     switch (rule) {
-      case 1:
-        if (Number(numList[0]) - Number(numList[1]) > 0) {
-          console.log('A');
-        } else if (Number(numList[0]) - Number(numList[1]) == 0) {
-          console.log('DRAW');
-        } else {
-          console.log('B');
-        }
+      case '1':
+        compare('A', 'B', numListA, numListB);
         break;
-      case -1:
-        if (Number(numList[0]) - Number(numList[1]) > 0) {
-          console.log('B');
-        } else if (Number(numList[0]) - Number(numList[1]) == 0) {
-          console.log('DRAW');
-        } else {
-          console.log('A');
-        }
+      case '-1':
+        compare('B', 'A', numListA, numListB);
         break;
+      default:
+        return;
     }
   }
 }
-/* eslint-disable */
+
+rl.on('close', () => {
+  solve(lines);
+});
