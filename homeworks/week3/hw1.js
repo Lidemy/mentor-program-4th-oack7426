@@ -1,19 +1,15 @@
-/* eslint-disable */
-var readline = require('readline');
-var rl = readline.createInterface({
-  input: process.stdin
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
 });
 
-var lines = []
+const lines = [];
 
-rl.on('line', function (line) {
-  lines.push(line)
+rl.on('line', (line) => {
+  lines.push(line);
 });
 
-rl.on('close', function () {
-  solve(lines)
-})
-/* eslint-enable */
 
 function solve(num) {
   for (let i = 0; i < num.length; i += 1) {
@@ -22,3 +18,8 @@ function solve(num) {
     }
   }
 }
+
+
+rl.on('close', () => {
+  solve(lines);
+});
