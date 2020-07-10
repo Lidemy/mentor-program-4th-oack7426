@@ -1,28 +1,28 @@
-/* eslint-disable */
-var readline = require('readline');
-var rl = readline.createInterface({
-  input: process.stdin
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
 });
 
-var lines = []
+const lines = [];
 
-rl.on('line', function (line) {
-  lines.push(line)
+rl.on('line', (line) => {
+  lines.push(line);
 });
 
-rl.on('close', function () {
-  solve(lines)
-})
-/* eslint-disable */
-
-function solve(lines) {
-  var strRes = "";
-  for (var i = lines[0].length - 1; i >= 0; i--) {
-    strRes += lines[0][i];
+function solve(str) {
+  let strRes = '';
+  for (let i = str[0].length - 1; i >= 0; i -= 1) {
+    strRes += str[0][i];
   }
-  if (strRes == lines[0]) {
+  if (strRes === str[0]) {
     console.log('True');
   } else {
     console.log('False');
   }
 }
+
+
+rl.on('close', () => {
+  solve(lines);
+});

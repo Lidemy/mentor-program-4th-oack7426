@@ -1,19 +1,14 @@
-/* eslint-disable */
-var readline = require('readline');
-var rl = readline.createInterface({
-  input: process.stdin
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
 });
 
-var lines = []
+const lines = [];
 
-rl.on('line', function (line) {
-  lines.push(line)
+rl.on('line', (line) => {
+  lines.push(line);
 });
-
-rl.on('close', function () {
-  solve(lines)
-})
-/* eslint-enable */
 
 function solve(fun) {
   const range = fun[0].split(' ');
@@ -28,3 +23,8 @@ function solve(fun) {
     }
   }
 }
+
+
+rl.on('close', () => {
+  solve(lines);
+});
