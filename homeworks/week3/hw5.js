@@ -17,7 +17,7 @@ rl.on('close', function () {
 
 
 function solve(num) {
-  for (let i = 0; i < num.length; i += 1) {
+  for (let i = 1; i < num.length; i += 1) {
     var numList = num[i].split(" ");
     if (Number(num[0]) != num.length - 1) {
       return
