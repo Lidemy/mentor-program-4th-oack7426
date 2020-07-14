@@ -10,17 +10,17 @@ rl.on('line', (line) => {
   lines.push(line);
 });
 
-function compare(a, b, Alen, Blen) {
-  if (Alen.length > Blen.length) {
+function compare(a, b, aLen, bLen) {
+  if (aLen.length > bLen.length) {
     console.log(a);
-  } else if (Alen.length === Blen.length) {
-    const numLen = Alen.length;
+  } else if (aLen.length === bLen.length) {
+    const numLen = aLen.length;
     for (let ii = 0; ii < numLen; ii += 1) {
-      if (Number(Alen[ii]) > Number(Blen[ii])) {
+      if (Number(aLen[ii]) > Number(bLen[ii])) {
         console.log(a);
         break;
       }
-      if (Number(Alen[ii]) < Number(Blen[ii])) {
+      if (Number(aLen[ii]) < Number(bLen[ii])) {
         console.log(b);
         break;
       }
@@ -38,17 +38,11 @@ function solve(num) {
     if (numListA === numListB) {
       console.log('DRAW');
     }
-
-
-    switch (rule) {
-      case '1':
-        compare('A', 'B', numListA, numListB);
-        break;
-      case '-1':
-        compare('B', 'A', numListA, numListB);
-        break;
-      default:
-        return;
+    if (rule === '1') {
+      compare('A', 'B', numListA, numListB);
+    }
+    if (rule === '-1') {
+      compare('B', 'A', numListA, numListB);
     }
   }
 }

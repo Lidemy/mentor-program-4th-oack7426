@@ -13,8 +13,8 @@ rl.on('line', (line) => {
 
 function solve(num) {
   for (let i = 0; i < num.length; i += 1) {
-    for (let ii = 0; ii < num[i]; ii += 1) {
-      console.log('*'.repeat(ii + 1));
+    for (let j = 0; j < num[i]; j += 1) {
+      console.log('*'.repeat(j + 1));
     }
   }
 }
