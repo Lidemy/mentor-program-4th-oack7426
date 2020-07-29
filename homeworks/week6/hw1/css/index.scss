@@ -1,0 +1,83 @@
+/**************************/
+
+// hw1 - 首頁
+
+/**************************/
+@import "./_component.scss";
+
+
+section{
+    padding-top: 80px;
+    margin-bottom: 40px;
+}
+h3{
+    font-weight: bold;
+    font-size: 36px;
+    padding: 0 17px;
+    border-left: 15px solid #a3dea2 ;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+// 咬一口廚房
+.top-section{
+    background: url(../img/banner.jpg);
+    @include bg;
+    background-size: cover;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba($color: #000000, $alpha: 0.2);
+
+    }
+    h2{
+        padding: 255px 0;
+        text-align: center;
+        color: #fff;
+        font-size: 60px;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+    }
+    
+}
+// 當輕食之風盛起
+.lightfood-section{
+    padding-bottom: 120px;
+    >div{
+        p{
+            line-height: 2;
+        }
+    }
+    .btn-box{
+        margin-top: 80px;
+    }
+    .is-btn{
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 0.32px;
+        padding: 60px 70px;
+        border-radius: 10px;
+        margin: 0 12px;
+        &.btn-order{
+            background: $light-teallight-teal;
+        }
+        &.btn-inquire{
+            background: #f9f9b5;
+        }
+    }
+}
+// Menu 搶先看
+.menu-section{
+    figure{
+        @include flex-between;
+        overflow: hidden;
+        img{
+            flex: 1;
+        }
+    }
+}

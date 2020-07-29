@@ -1,0 +1,81 @@
+/**************************/
+
+// hw1
+// 設計稿 https://app.zeplin.io/project/5eab7fd61be0341bdeed0db0/screen/5eab888623964b1b1214a9d3
+
+/**************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import "_reset.scss";
+@import "_component.scss";
+
+
+body{
+    font-family: Microsoft JhengHei,'微軟正黑體',sans-serif;
+    padding-top: 90px;
+   
+}
+*,*::before,*::after{
+    color: #010101;
+}
+a{
+    text-decoration: none;
+}
+
+
+.is-en{
+    font-family: 'Questrial', sans-serif;
+}
+
+.is-center{
+    text-align: center;
+}
+.is-max-width{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.is-btn{
+    display: inline-block;
+    &:hover{
+        opacity: .7;
+    }
+}
+
+//header
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #fff;
+    z-index: 99;
+}
+header nav{
+    padding: 20px 100px;
+    @include flex-between;
+    h1 a{
+        color: #489846;
+        font-size: 36px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include flex-between;
+        li a{
+            display: block;
+            padding: 15px 25px;
+            font-size: 18px;
+            &:hover{
+                opacity: .7;
+            }
+        }
+        li a.lottery-btn{
+            background: #ff7286;
+            border-radius: 8px;
+            color: #fff;
+           
+        }
+    }
+}
+//footer
