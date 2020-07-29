@@ -92,6 +92,8 @@ a {
 
 header {
   padding: 20px 0;
+  -webkit-box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+          box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
   position: fixed;
   left: 0;
   right: 0;
