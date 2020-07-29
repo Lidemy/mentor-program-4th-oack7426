@@ -89,4 +89,50 @@ h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 20%;
+}
+
+.saygood-section > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.saygood-section img {
+  width: 106px;
+  border-radius: 50vh;
+}
+
+.saygood-section article {
+  border-radius: 5px;
+  -webkit-box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
+          box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
+  border: solid 1px #c7e5ec;
+  padding: 40px 25px;
+  margin-top: 100px;
+}
+
+.saygood-section article h6 {
+  padding: 5px 0;
+}
+
+.saygood-section article:nth-child(2) {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.saygood-section article > div {
+  margin-top: -100px;
+}
+
+.saygood-section article p {
+  margin-top: 23px;
+  letter-spacing: 0.14px;
+  line-height: 1.5;
 }

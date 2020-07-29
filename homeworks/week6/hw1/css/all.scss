@@ -43,6 +43,7 @@ a{
 
 //header
 header{
+    padding: 20px 0;
     position: fixed;
     left: 0;
     right: 0;
@@ -51,7 +52,6 @@ header{
     z-index: 99;
 }
 header nav{
-    padding: 20px 100px;
     @include flex-between;
     h1 a{
         color: #489846;
@@ -79,3 +79,35 @@ header nav{
     }
 }
 //footer
+footer{
+    font-size: 14px;
+    color: #484848;
+    .info-box{
+        padding: 35px 0;
+        background: #e8efee;
+        >div{
+            @include flex-between;
+            align-items: flex-start;
+        }
+        ul.left-inbox li{
+            padding: 5px 0;
+        }
+        div.right-inbox{
+            .logo{
+                color: #489846;
+                font-size: 36px;
+            }
+            .community{
+                font-size: 14px;
+                color: #484848;
+                margin-top: 5px;
+            }
+        }
+    }
+    .copyright-box{
+        text-align: center;
+        color: #fff;
+        padding: 15px 0;
+        background-color: #35564b;
+    }
+}
