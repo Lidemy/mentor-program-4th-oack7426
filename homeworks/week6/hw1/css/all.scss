@@ -41,6 +41,7 @@ p{
 .is-max-width{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 .is-title{
     font-weight: bold;
@@ -120,6 +121,9 @@ footer{
         >div{
             @include flex-between;
             align-items: flex-start;
+            @include phone-l{
+                flex-direction: column;
+            }
         }
         ul.left-inbox li{
             padding: 5px 0;

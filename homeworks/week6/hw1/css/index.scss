@@ -3,6 +3,7 @@
 // hw1 - 首頁
 
 /**************************/
+@import "_rwd.scss";
 @import "./_component.scss";
 
 
@@ -59,6 +60,11 @@ h3{
         padding: 60px 70px;
         border-radius: 10px;
         margin: 0 12px;
+        &:first-child{
+            @include phone-l{
+                margin-bottom: 20px;
+            }
+        }
         &.btn-order{
             background: $light-teallight-teal;
         }
@@ -72,9 +78,15 @@ h3{
     figure{
         @include flex-between;
         overflow: hidden;
+        @include phone-l{
+            flex-direction: column;
+        }
         img{
             flex: 1;
             width: 20%;
+            @include phone-l{
+                width: 100%;
+            }
         }
     }
 }
@@ -82,6 +94,9 @@ h3{
 .saygood-section{
     >div{
         @include flex-between;
+        @include ipad-s{
+         flex-direction: column;   
+        }
     }
     img{
        width: 106px;
@@ -94,12 +109,17 @@ h3{
         border: solid 1px #c7e5ec;
         padding: 40px 25px;
         margin-top: 100px;
+        
         h6{
             padding: 5px 0;
         }
         &:nth-child(2){
             margin-left:16px;
             margin-right:16px;
+            @include ipad-s{
+                margin-left:0;
+                margin-right:0;
+               }
         }
         >div{
             margin-top: -100px;
