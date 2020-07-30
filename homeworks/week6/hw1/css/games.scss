@@ -7,9 +7,8 @@
 
 .top-section,
 .result-section{
-    min-height: calc(100vh - 300px);
     text-align: center;
-  
+    // min-height: calc(100vh - 300px);
     .btn-wrap{
         padding: 36px 0;
         text-align: center;
@@ -65,7 +64,7 @@
 }
 // 結果頁
 .result-section{
-    padding: 190px 0;
+    padding: 240px 0;
     text-align: center;
     background: url(../img/result-banner.png);
     @include bg;

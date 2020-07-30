@@ -21,11 +21,14 @@ body{
 main{
     padding-top: 90px;
     padding-bottom: 210px;
+    min-height: calc(100vh - 300px);
 }
 a{
     text-decoration: none;
 }
-
+p{
+    line-height: 1.6;
+}
 
 .is-en{
     font-family: 'Questrial', sans-serif;
@@ -50,6 +53,12 @@ a{
     &:hover{
         opacity: .7;
     }
+}
+.is-gre{
+    color: #77a076;
+}
+.is-red{
+    color: #ff7286;
 }
 
 //header
