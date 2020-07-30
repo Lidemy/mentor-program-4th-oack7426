@@ -7,6 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import "_reset.scss";
+@import "_rwd.scss";
 @import "_component.scss";
 
 
@@ -74,6 +75,12 @@ header{
 }
 header nav{
     @include flex-between;
+    .menu-icon{
+        display: none;
+        @include phone-l{
+            display: block;
+        }
+    }
     h1 a{
         color: #489846;
         font-size: 36px;
@@ -83,6 +90,9 @@ header nav{
         align-items: center;
         justify-content: space-between;
         @include flex-between;
+        @include phone-l{
+            display: none;
+        }
         li a{
             display: block;
             padding: 15px 25px;
