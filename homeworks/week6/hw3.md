@@ -24,13 +24,13 @@
 
 ## 請問什麼是盒模型（box modal）
 #### ` box-sizing: content-box;`
-網頁預設值，會把 `padding` 、 `border` 、 `margin` 的數值都算在總寬高上。
+網頁預設值，會把 `padding` 、 `border` 的數值都算在總寬高上。
 (你以為的寬不是你以為的)
 ![盒模型原理1](https://i.imgur.com/e5ZGe0f.png)
 
 
 #### `box-sizing: border-box;` 
-讓寬高跟設定的一樣，不受 `padding` 、 `border` 、 `margin` 影響
+讓寬高跟設定的一樣，不受 `padding` 、 `border` 影響
 ![盒模型原理2](https://i.imgur.com/qLH6fIK.png)
 
  
@@ -58,7 +58,7 @@
 
 
 #### `position: absolute` 絕對定位 (子元素)
-很類似 `position: fixed`，不過定位點是往上找到 第一個有 `position: relative` 的元素，如果都沒有的話就會以 `<body>` 作為定位點。
+`absolute` 的定位點是往上找第一個 `position` 不是 `static` 的元素（`fixed`/`relative`/`absolute`）
 `position: absolute` 在頁面上沒有瀏覽器安排的位置(類似於浮在版面上)。
 此設定會影響到其他元素的位置，畢竟原本的元素位置是直接消失變成浮空了。
 
