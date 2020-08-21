@@ -1,0 +1,4 @@
+input[type="checkbox"]:checked ~ span {
+  color: grey;
+  text-decoration: line-through;
+}
