@@ -7,40 +7,45 @@
 // 如果沒有通過檢查:
 // 請在欄位的 input 下方顯示紅字提醒， (OK)
 // 有通過的話跳出一個 alert(OK) 展示使用者填寫的資料(OK)。
-
-
-/* eslint-disable */
-document.getElementById('submit-btn').addEventListener('click', function (e) {
-    e.preventDefault();
-    var hasfill = false;
-    var hasfillradio = false;
-    var list = "";
-    // 這段是判斷input[type="text"]
-    var $inputAll = document.querySelectorAll('input[type="text"]');
-    for (let i = 0; i < $inputAll.length; i++) {
-        var $error = document.querySelectorAll('.js-input-text .error');
-        if ($inputAll[i].value == "") {
-            $error[i].setAttribute('style', 'display:block');
-            hasfill = false;
-        } else {
-            $error[i].setAttribute('style', 'display:none');
-            list += $inputAll[i].name + "=" + $inputAll[i].value;
-            hasfill = true;
-        }
-    }
-    // 這段是判斷input[type="radio"]
-    var $errorRadio = document.querySelector('.js-input-radio .error');
-    if (document.querySelector('input[type="radio"]').checked == "") {
-        $errorRadio.setAttribute('style', 'display:block');
-        hasfillradio = false;
+function form(e) {
+  e.preventDefault();
+  let hasfill = false;
+  let hasfillradio = false;
+  let list = '';
+  // 這段是判斷input[type="text"]
+  const $inputAll = document.querySelectorAll('input[type="text"]');
+  const $error = document.querySelectorAll('.js-input-text .error');
+  for (let i = 0; i < $inputAll.length; i += 1) {
+    if ($inputAll[i].value === '') {
+      $error[i].setAttribute('style', 'display:block');
+      hasfill = false;
     } else {
-        $errorRadio.setAttribute('style', 'display:none');
-        list += document.querySelector('input[type="radio"]').name + "=" + document.querySelector('input[type="radio"]').value;
-        hasfillradio = true;
+      $error[i].setAttribute('style', 'display:none');
+      list += `${$inputAll[i].name} = ${$inputAll[i].value}  \n`;
+      hasfill = true;
     }
-    // 判斷是否都填寫，是：跳出alert
-    if (hasfill && hasfillradio) {
-        alert(list);
+  }
+  // 這段是判斷input[type="radio"].
+  const $radio = document.querySelector('input[type="radio"]');
+  const $radioType = document.getElementsByName($radio.name);
+  const $errorRadio = document.querySelector('.js-input-radio .error');
+  for (let j = 0; j < $radioType.length; j += 1) {
+    if ($radioType[j].checked) {
+      list += `${$radio.name}  =  ${$radioType[j].value} \n`;
+      $errorRadio.setAttribute('style', 'display:none');
+      hasfillradio = true;
+      break;
+    } else {
+      $errorRadio.setAttribute('style', 'display:block');
+      hasfillradio = false;
     }
-});
-/* eslint-enable */
+  }
+  // 判斷是否都填寫，是：跳出alert
+  if (hasfill && hasfillradio) {
+    /* eslint-disable */
+    alert(list);
+    /* eslint-enable */
+  }
+}
+
+document.getElementById('submit-btn').addEventListener('click', form);
