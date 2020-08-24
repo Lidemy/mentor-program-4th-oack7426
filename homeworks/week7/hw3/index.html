@@ -8,18 +8,26 @@
 </head>
 <body>
     <h1>Todo List</h1>
-    <input type="text"><button>新增</button>
+    <input type="text" id="addTodolist"><button id="addBtn">新增</button>
     <h3>清單</h3>
     <div>
-        <ul>
+        <ul id="todolistWrap">
             <li>
                 <label>
                     <input type="checkbox">
                     <span>我是代辦範例</span>
                 </label>
-                <button>刪除</button>
+                <button onclick="delet(this)">刪除</button>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" checked>
+                    <span>我是已完成範例</span>
+                </label>
+                <button onclick="delet(this)">刪除</button>
             </li>
         </ul>
     </div>
+    <script src="./todolist.js"></script>
 </body>
 </html>
