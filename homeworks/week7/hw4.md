@@ -23,6 +23,9 @@ event delegation 事件代理
 
 
 ## event.preventDefault() 跟 event.stopPropagation() 差在哪裡，可以舉個範例嗎？
+兩者最大的差別在於事件傳遞與否
+
+
 event.preventDefault() 停止默認動作
 觸發事件，但不觸發DOM的預設行為
 [範例](https://codepen.io/oack7426/pen/LYNLWQp)
