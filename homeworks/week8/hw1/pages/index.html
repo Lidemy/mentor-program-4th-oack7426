@@ -79,9 +79,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="../js/all.js"></script>
     <script>
+        $('#header').load("./component/header.html");
+        $('#footer').load("./component/footer.html");
         $(function () {
-            $('#header').load("./component/header.html");
-            $('#footer').load("./component/footer.html");
+            $('#menu-btn').on('click', function () {
+                $('#menu-list').toggleClass('active');
+            });
         });
     </script>
 </body>

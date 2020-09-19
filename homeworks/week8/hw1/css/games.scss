@@ -4,6 +4,7 @@
 
 /**************************/
 @import "./_component.scss";
+@import"./_rwd.scss";
 
 .top-section,
 .result-section{
@@ -19,17 +20,21 @@
         text-align: center;
         border-radius: 8px;
         background-color: #e62a45;
+        @include phone-l{
+            padding: 18px 0px;
+            display: block; 
+        }
     }
 }
 
 // 抽獎頁
 .top-section{
-    padding: 50px 0;
+    padding: 50px 20px;
     background: url(../img/games-banner.png);
     @include bg;
     background-size: cover;
     article{
-        width: 500px;
+        max-width: 500px;
         padding: 25px 20px;
         border-radius: 16px;
         background: #fff;
@@ -64,7 +69,7 @@
 }
 // 結果頁
 .result-section{
-    padding: 240px 0;
+    padding: 240px 20px;
     text-align: center;
     position: relative;
     &::before{

@@ -78,6 +78,9 @@ header nav{
     @include flex-between;
     .menu-icon{
         display: none;
+        position: relative;
+        z-index: 11;
+        padding: 10px;
         @include phone-l{
             display: block;
         }
@@ -85,6 +88,8 @@ header nav{
     h1 a{
         color: #489846;
         font-size: 36px;
+        position: relative;
+        z-index: 11;
     }
     ul {
         display: flex;
@@ -93,6 +98,16 @@ header nav{
         @include flex-between;
         @include phone-l{
             display: none;
+            &.active{
+                padding: 40px 20px;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 60px;
+                bottom: 0;
+                background: #fff;
+                display: block;
+            }
         }
         li a{
             display: block;
