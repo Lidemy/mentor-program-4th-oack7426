@@ -66,11 +66,47 @@
 .result-section{
     padding: 240px 0;
     text-align: center;
-    background: url(../img/result-banner.png);
-    @include bg;
-    background-size: cover;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        opacity: .5;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
     h2{
         font-size: 36px;
+    }
+   
+    &.first-section::before{
+        background: url(../img/1.jpg);
+        @include bg;
+        background-size: cover;
+        z-index: -1;
+    }
+    &.second-section::before{
+        background: url(../img/2.jpg);
+        @include bg;
+        background-size: cover;
+        z-index: -1;
+    }
+    &.third-section::before{
+        background: url(../img/3.jpg);
+        @include bg;
+        background-size: cover;
+        z-index: -1;
+    }
+    &.none-section{
+        background: #000;
+        &::before{
+            display: none;
+        }
+        h2{
+            color: #fff;
+        }
     }
 
 }

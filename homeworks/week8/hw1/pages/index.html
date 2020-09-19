@@ -12,7 +12,8 @@
 <body>
     <header id="header"></header>
     <main>
-        <section class="top-section">
+        <!-- lottery -->
+        <section class="top-section" id="lottery">
             <article>
                 <h2>2020 夏日輕盈特賞！ 抽獎活動辦法</h2>
                 <table>
@@ -32,13 +33,51 @@
                     </tr>
                 </table>
                 <div class='btn-wrap'>
-                    <a class="is-btn" href="./games2.html">我要抽獎</a>
+                    <a class="is-btn" href="javascript:;">我要抽獎</a>
+                </div>
+            </article>
+        </section>
+        <!-- *** result *** -->
+        <!-- FIRST -->
+        <section class="result-section first-section" id="first-result" style="display:none">
+            <article>
+                <h2>恭喜你中頭獎了！日本東京來回雙人遊！</h2>
+                <div class='btn-wrap'>
+                    <a class="is-btn" href="javascript:;">我要抽獎</a>
+                </div>
+            </article>
+        </section>
+        <!-- SECOND -->
+        <section class="result-section second-section" id="second-result" style="display:none">
+            <article>
+                <h2>二獎！90 吋電視一台！</h2>
+                <div class='btn-wrap'>
+                    <a class="is-btn" href="javascript:;">我要抽獎</a>
+                </div>
+            </article>
+        </section>
+        <!-- THIRD -->
+        <section class="result-section third-section" id="third-result" style="display:none">
+            <article>
+                <h2>恭喜你抽中三獎：知名 YouTuber 簽名握手會入場券一張，bang！</h2>
+                <div class='btn-wrap'>
+                    <a class="is-btn" href="javascript:;">我要抽獎</a>
+                </div>
+            </article>
+        </section>
+        <!-- NONE -->
+        <section class="result-section none-section" id="none-result" style="display:none">
+            <article>
+                <h2>銘謝惠顧</h2>
+                <div class='btn-wrap'>
+                    <a class="is-btn" href="javascript:;">我要抽獎</a>
                 </div>
             </article>
         </section>
     </main>
     <footer id="footer"></footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="../js/all.js"></script>
     <script>
         $(function () {
             $('#header').load("./component/header.html");

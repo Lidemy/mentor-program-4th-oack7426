@@ -1,4 +1,2 @@
-input[type="checkbox"]:checked ~ span {
-  color: grey;
-  text-decoration: line-through;
-}
+input[type="checkbox"]:checked ~ span{color:grey;text-decoration:line-through}
+/*# sourceMappingURL=style.css.map */
